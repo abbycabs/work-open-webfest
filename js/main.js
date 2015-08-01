@@ -1,13 +1,13 @@
 var distance = { 0: 0,
-                 1: 0,
-                 2: 10,
-                 3: 15,
-                 4: 20,
-                 5: 55,
-                 6: 65,
-                 7: 80,
-                 8: 95,
-                 9: 95 };
+                 1: 3,
+                 2: 8,
+                 3: 13,
+                 4: 18,
+                 5: 54,
+                 6: 58,
+                 7: 74,
+                 8: 84,
+                 9: 90 };
     timeline = document.querySelector('.tl'),
     labels =
       { sr: timeline.querySelector('.tl-sr'),
@@ -49,8 +49,26 @@ Reveal.addEventListener( 'slidechanged', function( event ) {
   updateTimeline(event.indexh);
 } );
 
+function updateLabels(h){
+ var labels = timeline.querySelectorAll('.tl-l');
+ for(var l in labels){
+  if(labels[l].classList) {
+    labels[l].classList.remove('active');
+  }
+ }
+ var activeLabels = timeline.querySelectorAll('.page-' + (h-start));
+ for(var label in activeLabels){
+   var lab = activeLabels[label];
+   if(lab.classList) {
+     lab.classList.add('active');
+     lab.classList.add('past');
+   }
+ }
+}
+
 function updateTimeline(h){
   var status = tlStatus(h);
+  updateLabels(h);
   timeline.style.display = status.on ? 'block' : 'none';
 
   for(var key in status.rev) {

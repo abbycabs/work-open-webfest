@@ -32,6 +32,13 @@ body {
   left: 125px;
 }
 
+.tl .tl-line-labels {
+  height:90%;
+  top:5%;
+  position:fixed;
+  left: 74px;
+}
+
 .tl-years li:before {
     content:"·";
     font-size:100px;
@@ -40,23 +47,40 @@ body {
     color:#AAA;
 }
 
-.tl .tl-line .tl-years {
-  top:0;
-  position:fixed;
-  left:74px;
-  font-size:1em;
-  list-style: none;
-  /*display: none;*/
+.tl-years li.past:before {
+  color:#5681CB;
 }
 
-.tl .tl-line .tl-years.credit-tl li:before{
+.tl-years li.active:before {
+  color:blue;
+}
+
+
+.tl .tl-line-labels .tl-years {
+  top:0;
+  position:relative;
+  left:0;
+  font-size:1em;
+  list-style: none;
+}
+
+.tl .tl-line-labels .tl-years.credit-tl li:before{
     line-height:60px;
 }
-.tl .tl-line .tl-years.credit-tl {
+.tl .tl-line-labels .tl-years.credit-tl {
   top:55%;
 }
 
-.tl .tl-line .tl-years.active {
+.tl .tl-line-labels .tl-years li span {
+  color:#DDD;
+}
+
+.tl .tl-line-labels .tl-years li.active span {
+  color:black;
+}
+
+
+.tl .tl-line-labels .tl-years.active {
   display:block;
 }
 
