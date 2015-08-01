@@ -6,7 +6,8 @@ var distance = { 0: 0,
                  5: 55,
                  6: 65,
                  7: 80,
-                 8: 95 };
+                 8: 95,
+                 9: 95 };
     timeline = document.querySelector('.tl'),
     labels =
       { sr: timeline.querySelector('.tl-sr'),
@@ -19,7 +20,6 @@ var distance = { 0: 0,
     start = 3,
     progress = timeline.querySelector('.tl-progress');
 
-console.log(labels.credit);
 labels.credit.classList.add('active');
 // Full list of configuration options available at:
 // https://github.com/hakimel/reveal.js#configuration
@@ -59,18 +59,20 @@ function updateTimeline(h){
     }
   }
 
+
+
   progress.style.height = status.distance;
 }
 
 function tlStatus(h) {
-  return { on: (h>=start && h<(start+9)),
+  return { on: (h>=start && h<(start+10)),
            rev: {
             'sr': (h>start && h<(start+5)) ? 'active' : '',
             'dr': (h>(start+4)) ? 'active' : '',
             'credit': (h==(start+2) || h==(start+6)) ? 'active' : '',
             'doc': (h==(start+2) || h==(start+6)) ? 'active' : '',
             'sharing': (h==(start+3) || h==(start+7)) ? 'active' : '',
-            'participation': (h==(start+4) || h==(start+8)) ? 'active' : ''
+            'participation': (h==(start+4) || h>=(start+8)) ? 'active' : ''
            },
            distance: distance[h-start] + "%"
          };

@@ -4,7 +4,6 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
-
 /* Timeline stylezz */
 
 .tl {
@@ -33,6 +32,36 @@ body {
   left: 125px;
 }
 
+.tl-years li:before {
+    content:"·";
+    font-size:100px;
+    vertical-align:middle;
+    line-height:20px;
+    color:#AAA;
+}
+
+.tl .tl-line .tl-years {
+  top:0;
+  position:fixed;
+  left:74px;
+  font-size:1em;
+  list-style: none;
+  /*display: none;*/
+}
+
+.tl .tl-line .tl-years.credit-tl li:before{
+    line-height:60px;
+}
+.tl .tl-line .tl-years.credit-tl {
+  top:55%;
+}
+
+.tl .tl-line .tl-years.active {
+  display:block;
+}
+
+
+
 .tl .tl-label {
   text-align: right;
   font-size:1.2em;
@@ -54,13 +83,15 @@ body {
   color: black;
 }
 
+
+
 /* Value styles */
 
 .values {
   position:fixed;
   right:5px;
   bottom: 0;
-  font-size:1.2em;
+  font-size:1.5em;
   font-weight:bold;
   color:#AAA;
 }
@@ -71,4 +102,8 @@ body {
 
 .values ul li {
   padding:5px;
+}
+
+.values ul li.active {
+  color:black;
 }
