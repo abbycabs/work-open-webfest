@@ -1,12 +1,12 @@
 var distance = { 0: 0,
-                 1: 3,
+                 1: 4,
                  2: 8,
                  3: 12,
                  4: 18,
-                 5: 54,
-                 6: 58,
+                 5: 55,
+                 6: 59,
                  7: 74,
-                 8: 84,
+                 8: 85,
                  9: 92 };
     timeline = document.querySelector('.tl'),
     labels =
