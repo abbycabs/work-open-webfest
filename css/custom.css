@@ -1,4 +1,4 @@
-
+pro
 
 body {
   font-family: 'Open Sans', sans-serif;
@@ -50,18 +50,21 @@ body {
 }
 
 .tl-years li.past:before {
-  color:#5681CB;
+  color:#AAA;
 }
 
 .tl-years li.active:before {
   color:blue;
 }
 
+.tl-years li {
+  position:fixed;
+}
 
 .tl .tl-line-labels .tl-years {
   top:0;
   position:relative;
-  left:0;
+  left:2px;
   font-size:1em;
   list-style: none;
 }
