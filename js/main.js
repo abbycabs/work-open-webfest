@@ -10,7 +10,8 @@
                    6: 59,
                    7: 74,
                    8: 85,
-                   9: 92 };
+                   9: 92,
+                   10: 92 };
       timeline = document.querySelector('.tl'),
       labels =
         { sr: timeline.querySelector('.tl-sr'),
@@ -57,7 +58,7 @@
   }
 
   function tlStatus(h) {
-    return { on: (h>=start && h<(start+10)),
+    return { on: (h>=start && h<(start+11)),
              rev: {
               'sr': (h>start && h<(start+5)) ? 'active' : '',
               'dr': (h>(start+4)) ? 'active' : '',
